@@ -36,7 +36,7 @@ public class UserController {
         return "User successfully deleted";
     }
 
-    @GetMapping(value = "/user")
+    @GetMapping(value = "/user", produces = MediaType.APPLICATION_JSON_VALUE)
     public UserDTO findUserByEmail(@RequestBody String email) {
         return userService.findUserByEmail(email);
     }
